@@ -4,7 +4,7 @@
 import React, { useContext, useState } from 'react'
 import MyContext from '../Context/MyContext';
 import Card from 'react-bootstrap/Card';
-import { IconHeart, IconHeartFilled } from "@tabler/icons-react"
+import { BsHeartFill, BsHeart } from "react-icons/bs";
 
 const CardImg = ({ datImg, index }) => {
   const [isLiked, setIsLiked] = useState(datImg.liked);
@@ -25,9 +25,9 @@ const CardImg = ({ datImg, index }) => {
       <Card.Body>
       <Card.Title className='text-title'>{datImg.photographer}</Card.Title>
         {isLiked ? (
-          <IconHeartFilled onClick={addFavorite} />
+          <BsHeartFill onClick={addFavorite} />
         ) : (
-          <IconHeart onClick={addFavorite} />
+          <BsHeart onClick={addFavorite} />
         )}
       </Card.Body>
     </Card>
